@@ -73,9 +73,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.17.1)
       msgpack (~> 1.2)
-    bootstrap (5.3.2)
+    bootstrap (5.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -110,6 +111,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    libv8-node (18.16.0.0-x86_64-linux)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -122,6 +124,8 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
+    mini_racer (0.8.0)
+      libv8-node (~> 18.16.0.0)
     minitest (5.21.1)
     msgpack (1.7.2)
     net-imap (0.4.9.1)
@@ -168,9 +172,6 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    rails-i18n (7.0.8)
-      i18n (>= 0.7, < 2)
-      railties (>= 6.0.0, < 8)
     railties (7.0.8)
       actionpack (= 7.0.8)
       activesupport (= 7.0.8)
@@ -235,16 +236,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap
+  bootstrap (= 5.3.1)
   capybara
   debug
   importmap-rails
   jbuilder
+  mini_racer (= 0.8.0)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
-  rails-i18n (~> 7.0.0)
-  sassc-rails
+  sassc-rails (= 2.1.2)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
@@ -256,4 +257,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.10
+   2.5.4

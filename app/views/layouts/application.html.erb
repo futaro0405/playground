@@ -14,6 +14,9 @@
       <a class="navbar-brand" href="#">Task</a>
     </nav>
     <div class="container">
+      <% if flash.notice.present? %>
+        <% alert.alert-success = flash.notice %>
+      <% end %>
       <%= yield %>
     </div>
   </body>
