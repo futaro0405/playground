@@ -1,2 +1,7 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<h1>タスクの編集</h1>
+
+<nav class="nav justify-contennt-end">
+  <%= link_to '一覧', tasks_path, class: 'nav-link' %>
+</nav>
+
+<%= render partial: 'form', locals: { task: @task } %>

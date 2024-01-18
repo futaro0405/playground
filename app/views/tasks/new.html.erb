@@ -4,14 +4,4 @@
   <%= link_to '一覧', tasks_path, class: 'nav-link' %>
 </nav>
 
-<%= form_with model: @task, local: true do |form| %>
-  <div class="mb-3">
-    <%= form.label :name, class: 'form-label' %>
-    <%= form.text_field :name, class: 'form-control', id: 'task_name' %>
-  </div>
-  <div class="mb-3">
-    <%= form.label :description, class: 'form-label' %>
-    <%= form.text_area :description, rows: 5, class: 'form-control', id: 'task_description' %>
-  </div>
-  <%= form.submit nil, class: 'btn btn-primary' %>
-<% end %>
+<%= render partial: 'form', locals: { task: @task } %>
