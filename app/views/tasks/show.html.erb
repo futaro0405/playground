@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <th scope="row"><%= Task.human_attribute_name(:description) %></th>
-      <td><%= simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div") %></td>
+      <td><%= auto_link(simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")) %></td>
     </tr>
     <tr>
       <th scope="row"><%= Task.human_attribute_name(:created_at) %></th>
@@ -30,3 +30,4 @@
 </table>
 
 <%= link_to '編集', edit_task_path, class: 'btn btn-primary mr-3' %>
+<%= button_to '削除', @task, method: :delete, data: { confirm: "タスク「#{@task.name}」を削除します。よろしいですか？"}, class: 'btn btn-danger' %>
